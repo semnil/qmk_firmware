@@ -33,36 +33,36 @@ uint16_t keycode_config(uint16_t keycode) {
             }
             return KC_LCTL;
         case KC_LALT:
-            if (keymap_config.swap_lalt_lgui) {
-                if (keymap_config.no_gui) {
-                    return KC_NO;
-                }
-                return KC_LGUI;
-            }
+//            if (keymap_config.swap_lalt_lgui) {
+//                if (keymap_config.no_gui) {
+//                    return KC_NO;
+//                }
+//                return KC_LGUI;
+//            }
             return KC_LALT;
         case KC_LGUI:
-            if (keymap_config.swap_lalt_lgui) {
-                return KC_LALT;
-            }
-            if (keymap_config.no_gui) {
-                return KC_NO;
-            }
+//            if (keymap_config.swap_lalt_lgui) {
+//                return KC_LALT;
+//            }
+//            if (keymap_config.no_gui) {
+//                return KC_NO;
+//            }
             return KC_LGUI;
         case KC_RALT:
-            if (keymap_config.swap_ralt_rgui) {
-                if (keymap_config.no_gui) {
-                    return KC_NO;
-                }
-                return KC_RGUI;
-            }
+//            if (keymap_config.swap_ralt_rgui) {
+//                if (keymap_config.no_gui) {
+//                    return KC_NO;
+//                }
+//                return KC_RGUI;
+//            }
             return KC_RALT;
         case KC_RGUI:
-            if (keymap_config.swap_ralt_rgui) {
-                return KC_RALT;
-            }
-            if (keymap_config.no_gui) {
-                return KC_NO;
-            }
+//            if (keymap_config.swap_ralt_rgui) {
+//                return KC_RALT;
+//            }
+//            if (keymap_config.no_gui) {
+//                return KC_NO;
+//            }
             return KC_RGUI;
         case KC_GRAVE:
             if (keymap_config.swap_grave_esc) {
