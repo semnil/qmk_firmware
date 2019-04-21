@@ -51,15 +51,16 @@ uint16_t keycode_config(uint16_t keycode) {
 //            }
             return KC_LALT;
         case KC_LGUI:
-            // if (keymap_config.swap_lalt_lgui) {
-            //     return KC_LALT;
-            // }
-            // if (keymap_config.swap_lctl_lgui) {
-            //     return KC_LCTRL;
-            // }
-            // if (keymap_config.no_gui) {
-            //     return KC_NO;
-            // }
+            if (keymap_config.swap_lalt_lgui) {
+//                return KC_LALT;
+                return KC_LCTL;
+            }
+            if (keymap_config.swap_lctl_lgui) {
+                return KC_LCTRL;
+            }
+            if (keymap_config.no_gui) {
+                return KC_NO;
+            }
             return KC_LGUI;
         case KC_RCTL:
             if (keymap_config.swap_rctl_rgui) {
@@ -78,15 +79,16 @@ uint16_t keycode_config(uint16_t keycode) {
 //            }
             return KC_RALT;
         case KC_RGUI:
-            // if (keymap_config.swap_ralt_rgui) {
-            //     return KC_RALT;
-            // }
-            // if (keymap_config.swap_rctl_rgui) {
-            //     return KC_RCTL;
-            // }
-            // if (keymap_config.no_gui) {
-            //     return KC_NO;
-            // }
+            if (keymap_config.swap_ralt_rgui) {
+//                return KC_RALT;
+                return KC_RCTL;
+            }
+            if (keymap_config.swap_rctl_rgui) {
+                return KC_RCTL;
+            }
+            if (keymap_config.no_gui) {
+                return KC_NO;
+            }
             return KC_RGUI;
         case KC_GRAVE:
             if (keymap_config.swap_grave_esc) {
