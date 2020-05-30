@@ -39,7 +39,7 @@ volatile bool isLeftHand = true;
 #if defined(SPLIT_USB_DETECT)
 #    if defined(PROTOCOL_LUFA)
 static inline bool usbHasActiveConnection(void) { return USB_Device_IsAddressSet(); }
-static inline void usbDisable(void) { USB_Disable(); }
+static inline void usbDisable(void) { (USBCON &= ~(_BV(USBE) | _BV(OTGPADE))); }
 #    elif defined(PROTOCOL_CHIBIOS)
 static inline bool usbHasActiveConnection(void) { return usbGetDriverStateI(&USBD1) == USB_ACTIVE; }
 static inline void usbDisable(void) { usbStop(&USBD1); }
